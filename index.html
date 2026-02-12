@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sabri ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: #0d0d0d;
+    color: #f5f5f5;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.hero {
+    padding: 100px 20px 60px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: normal;
+    color: #d4af37;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid #d4af37;
+    background: transparent;
+    color: #d4af37;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d4af37;
+    color: black;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+img.main-photo {
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.floating {
+    position: fixed;
+    width: 150px;
+    opacity: 0.7;
+}
+
+.flower1 {
+    top: 10%;
+    left: 5%;
+}
+
+.flower2 {
+    bottom: 10%;
+    right: 5%;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<img src="flower1.png" class="floating flower1">
+<img src="flower2.png" class="floating flower2">
+
+<div class="hero" id="main">
+    <h1>Sabri</h1>
+    <h2>Since the moment we met...</h2>
+    <p>I’ve known you were someone different.</p>
+    <button onclick="showMessage()">Continue</button>
+</div>
+
+<div class="section hidden" id="question">
+    <p>Every moment with you feels intentional.<br>
+    Calm. Real. Beautiful.</p>
+
+    <img src="photo1.jpg" class="main-photo">
+
+    <h2>Will you be my Valentine?</h2>
+    <button onclick="sayYes()">Yes 🤍</button>
+</div>
+
+<div class="section hidden" id="yesSection">
+    <h1>You just made me the happiest man alive.</h1>
+    <p>I can't wait to make more memories with you.</p>
+
+    <iframe style="margin-top:30px;border-radius:12px"
+    src="https://open.spotify.com/embed/track/5Y4cYb2rR4d6JqFj5VqM5b"
+    width="300" height="80" frameBorder="0"
+    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("main").classList.add("hidden");
+    document.getElementById("question").classList.remove("hidden");
+}
+
+function sayYes() {
+    document.getElementById("question").classList.add("hidden");
+    document.getElementById("yesSection").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
